@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 915px;
+    background: linear-gradient(180deg, rgb(101, 242, 235), whitesmoke);
+}
+/* maps géograpgie */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 915px;
+}
+.picture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(1.png.PNG);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 335px;
+    box-shadow: 0.4px 0.4px 0.9em rgb(110, 103, 103);
+    border-radius: 50px;
+    height: 335px;
+    width: 335px;
+}
+.fig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.maps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  height: 52px;
+  width: 30px;
+  margin: 3px;
+}
+.a{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 50%;
+}
+.b{
+    display: flex;
+    flex-direction: row;
+    width: 2px;
+}
+.c{
+
+    flex-direction: row;
+    width: 0%;
+}
+.d{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.e{
+    display: flex;
+    flex-direction: row;
+    width: 0%;
+}
+
+/* menu de recherche */
+.recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 260px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgb(85, 147, 22),red,white);
+    animation: 1s infinite recherche;
+  }
+ @keyframes recherche{
+  50%{
+    background: linear-gradient(90deg,white,rgb(85, 147, 22),red);
+  }
+ }
+  .styles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    background-color: whitesmoke;
+    font-size: xx-large;
+    font-size: 20px;
+    height: 45px;
+    width: 250px;
+    background-image: url(loop.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-size: 50px;
+    box-shadow: 0.4px 0.4px 0.9em rgb(110, 103, 103);
+  }
+  .img{
+    opacity: 0;
+  }
+  /*  */
+      /* title */
+      .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50px 50px 0 0;
+        width: 412px;
+      }
+      h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        text-shadow: 5px 5px 10px whitesmoke;
+      }
+      .pa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        opacity: 1;
+        animation: 2s infinite pa;
+      }
+      @keyframes pa{
+        50%{
+          opacity: 0;
+        }
+      }
+      .pbb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 30px;
+        border-radius: 20px;
+        box-shadow: inset 0.2px 0.2px 0.8em black;
+        overflow: hidden;
+    }
+      .pb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        animation: 12s infinite pb;
+      }
+      @keyframes pb{
+        0%{
+          transform: translateX(200px);
+        }
+        50%{
+          transform: translateX(-200px);
+        }
+      }
+
+.navbar{
+    background: black;
+    height: 100px;
+    width: 412px;
+    position: fixed;
+    top: 815px;
+    flex-direction: row;
+}
+@media screen and (max-width:767px)
+{
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        height: 100px;
+        width: 1000px;
+        position: fixed;
+        top: 815px;
+    }
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 80px;
+    background: white;
+}
+/*  */
+.body{
+    font-family: 'Lato', sans-serif;
+    }
+    
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+     
+    }
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+    
+
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+    .items{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+      }
+      .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        height: 40px;
+        width: 40px;
+      }
+      .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: whitesmoke;
+        text-shadow: 5px 5px 7px skyblue;
+        background: none;
+        border: none;
+        height: 40px;
+        
+      }
+
+    </style>
+                  <!-- barre de recherche+maps -->
+                  <div class="container">
+                    <div class="recherche">
+                        <input class="styles" id="searchbar" onkeyup="search_icones()"  type="text"
+                        name="search" placeholder=" search home...">
+                      
+                         </div>
+                         <div class="picture">
+                         <nav class="figure">
+            
+                            <ul class="fig">
+            
+                                <div class="a">
+                                <button class="maps"><h2 class="h2">31</h2><img class="img" src="" alt="Oran"></button>
+                                <button class="maps"><h2 class="h2">16</h2><img class="img" src="" alt="Alger"></button>
+                                <button class="maps"><h2 class="h2">15</h2><img class="img" src="" alt="Tizi ouzou"></button>
+                                <button class="maps"><h2 class="h2">06</h2><img class="img" src="" alt="Béjaia"></button>
+                                <button class="maps"><h2 class="h2">18</h2><img class="img" src="" alt="Jijel"></button>
+                                <button class="maps"><h2 class="h2">21</h2><img class="img" src="" alt="Skikda"></button>
+                                </div>
+            
+                                <div class="b">
+                                    <button class="maps"><h2 class="h2">19</h2><img class="img" src="" alt="Sétif"></button>
+                                    <button class="maps"><h2 class="h2">25</h2><img class="img" src="" alt="Constantine"></button>
+                                </div>
+            
+                                <div class="c">
+                                    <button class="maps"><h2 class="h2">05</h2><img class="img" src="" alt="Batna"></button>
+                                </div>
+            
+                                <div class="d">
+                                    <button class="maps"><h2 class="h2">47</h2><img class="img" src="" alt="Ghardaia"></button>
+                                </div>
+            
+                                <div class="e">
+                                    <button class="maps"><h2 class="h2">11</h2> <img class="img" src="" alt="Tamanrasset"></button>
+                                    <button class="maps"><h2 class="h2">56</h2><img class="img" src="" alt="Djanet"></button>
+                                </div>
+            
+                            </ul>
+                         </nav>
+                         </div>
+                         <!--  -->
+                                                   <!-- title -->
+                                                   <div class="title">
+                                                    <h1 class="h1">Voyager à travers L'Algérie</h1>
+                                                    <p class="pa">Réservez vite votre logement.</p>
+                                                    <div class="pbb">
+                                                    <p class="pb">Les meilleurs destinations avec...</p>
+                                                    </div>
+                                                    </div>
+<div class="navbar">
+<div class="btn">
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/sf-regular-filled/30/ffffff/home.png"/></button><button class="item">Home</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/ios-filled/30/ffffff/fantasy.png"/></button><button class="item">Change Thème</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/language.png"/></button><button class="item"> Langues</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/material-rounded/30/ffffff/service.png"/></button><button class="item">Services</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/ios-filled/30/ffffff/mailbox-closed-flag-up.png"/></button><button class="item">Nous rejoindre</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/glyph-neue/30/ffffff/ask-question.png"/></button><button class="item">Qui sommes-nous</button></div></a>
+          <a href="#"><div class="items"><button class="icons"><img src="https://img.icons8.com/material-rounded/30/ffffff/about.png"/></button><button class="item">Aide</button></div></a>
+        </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+<div class="btn">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <span class="material-symbols-outlined">
+        assistant_navigation
+        </span>
+</div>
+<div class="btn">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <span class="material-symbols-outlined">
+        add_circle
+        </span>
+</div>
+<div class="btn">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <span class="material-symbols-outlined">
+        download_done
+        </span>
+</div>
+<div class="btn">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <span class="material-symbols-outlined">
+        auto_mode
+        </span>
+  </div>
+
+</div>
+<script>
+    // menu burgueur
+function openNav() {
+    document.getElementById("myNav").style.width = "350px";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  // barre de recherche
+function search_icones(){
+    let input = document.getElementById('searchbar').value 
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('maps');
+    for (i=0; i<x.length; i++){
+        if (!x[i].innerHTML.toLocaleLowerCase().includes(input)){
+            x[i].style.display="none";
+        }
+        else{
+            x[i].style.display="list-item";
+  
+        }
+    }
+  }
+</script>
+
+
+    <script src="code.js"></script>
+</body>
+</html>
